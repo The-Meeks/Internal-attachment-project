@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style >
+      #contactForm {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px #ccc;
+}
+
+#contactForm label {
+  display: block;
+  margin-top: 10px;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#contactForm input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#contactForm input[type="submit"]:hover {
+  background-color: #45a049;
+}
+    </style>
+    <meta charset="utf-8">
+    <title>chatroom</title>
+  </head>
+  <body>
+    <form id="contactForm">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" required></textarea><br>
+  <input type="submit" value="Submit">
+</form>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+  $("#contactForm").submit(function(event) {
+    event.preventDefault();
+    var formData = $(this).serialize();
+    $.ajax({
+      type: "POST",
+      url: "process-form.php",
+      data: formData,
+      success: function(response) {
+        alert("Message sent successfully!");
+        $("#contactForm")[0].reset();
+      },
+      error: function() {
+        alert("Error sending message.");
+      }
+    });
+  });
+});
+
+</script>
+  </body>
+</html>

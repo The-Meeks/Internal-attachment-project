@@ -1,0 +1,25 @@
+Payment received:
+Name: Ben
+Unit: Unit 105
+Months: 7
+Total: 350
+Payment received:
+Name: Ben
+Unit: Unit 105
+Months: 7
+Total: 350
+Payment received:
+Name: Ben
+Unit: Unit 105
+Months: 7
+Total: 350
+Payment received:
+Name: Ben
+Unit: Unit 105
+Months: 7
+Total: 350
+Payment received:
+Name: Ben
+Unit: Unit 103
+Months: 5
+Total: 150

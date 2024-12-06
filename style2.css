@@ -1,0 +1,39 @@
+body{
+  background-color: teal;
+  height: 60px;
+}
+.container{
+
+ height: 500%;
+ width: 300px;
+ margin: 120px auto;
+ padding: 30px;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ background-color:  skyblue;
+ border-radius: 10px;
+}
+
+}
+.form-group{
+        margin-left: 20px;
+        margin-top: 10px;
+}
+#btn{
+   color: white;
+   background-color: #b57412;
+   padding: 10px;
+   font-size: large;
+   border-radius: 10px;
+   margin-left: 40px;
+
+}
+#btn:hover{
+  background-color: #57300c;
+}
+@media screen and (max-width: 700px){
+  .form{
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+  }
+}
